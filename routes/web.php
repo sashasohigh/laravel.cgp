@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('table_load_content/', [HomeController::class, 'table_load_content'])->name('table_load_content');
+Route::get('table/', [HomeController::class, 'table'])->name('table');
+Route::get('/', [HomeController::class, 'index'])->name('index');
