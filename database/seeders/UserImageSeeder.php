@@ -13,6 +13,6 @@ class UserImageSeeder extends Seeder
      */
     public function run(): void
     {
-        UserImage::factory(10000)->create();
+        UserImage::factory(100000)->create();
     }
 }
